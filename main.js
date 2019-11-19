@@ -10,9 +10,7 @@ const homeController = require("./controllers/homeController");
 app.set("view engine", "ejs");
 app.use(layouts);
 
-app.get("/", (req, res) => {
-    res.render("index")
-});
+app.get("/", homeController.renderIndexPage);
 
 app.listen(port, () => {
     console.log(`the server is listening on ${port}`)
