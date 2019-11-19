@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/shoki-0303/cuisine_cources_application/issues"
   },
-  "homepage": "https://github.com/shoki-0303/cuisine_cources_application#readme"
+  "homepage": "https://github.com/shoki-0303/cuisine_cources_application#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
 }
