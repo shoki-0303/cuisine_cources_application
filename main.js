@@ -5,6 +5,7 @@ const layouts = require("express-ejs-layouts");
 
 //controllerの呼び出し
 const homeController = require("./controllers/homeController");
+const userController = require("./controllers/userController");
 
 //middlewareの設定
 app.set("view engine", "ejs");
