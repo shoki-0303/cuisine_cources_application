@@ -12,6 +12,7 @@ app.set("view engine", "ejs");
 app.use(layouts);
 
 app.get("/", homeController.renderIndexPage);
+app.get("/signup", userController.renderSignUpPage);
 
 app.listen(port, () => {
     console.log(`the server is listening on ${port}`)
