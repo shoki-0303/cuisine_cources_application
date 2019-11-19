@@ -19,5 +19,8 @@
   "homepage": "https://github.com/shoki-0303/cuisine_cources_application#readme",
   "devDependencies": {
     "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
