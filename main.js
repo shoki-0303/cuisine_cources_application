@@ -10,6 +10,8 @@ const userController = require("./controllers/userController");
 //middlewareの設定
 app.set("view engine", "ejs");
 app.use(layouts);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/", homeController.renderIndexPage);
 app.get("/signup", userController.renderSignUpPage);
