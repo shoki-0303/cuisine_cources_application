@@ -10,5 +10,5 @@ exports.internalServerError = (err, req, res) => {
     let errorCode = httpStatus.INTERNAL_SERVER_ERROR;
     console.error(error.stack);
     res.status(errorCode);
-    res.render("500 error")
+    res.send("500 error")
 };
