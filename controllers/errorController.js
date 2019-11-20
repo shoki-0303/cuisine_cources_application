@@ -3,7 +3,7 @@ const httpStatus = require("http-status-codes");
 exports.pageNotFoundError = (req, res) => {
     let errorCode = httpStatus.NOT_FOUND;
     res.status(errorCode);
-    res.render(`${errorCode}| the page does not exist`)
+    res.send(`${errorCode}| the page does not exist`)
 };
 
 exports.internalServerError = (req, res) => {
