@@ -6,8 +6,9 @@ exports.pageNotFoundError = (req, res) => {
     res.send(`${errorCode}| the page does not exist`)
 };
 
-exports.internalServerError = (req, res) => {
+exports.internalServerError = (err, req, res) => {
     let errorCode = httpStatus.INTERNAL_SERVER_ERROR;
+    console.error(error.stack);
     res.status(errorCode);
     res.render("500 error")
 };

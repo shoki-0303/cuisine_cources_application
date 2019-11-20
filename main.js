@@ -21,6 +21,7 @@ app.post("/signup", userController.resisterUserData);
 
 //エラーハンドリング
 app.use(errorController.pageNotFoundError);
+app.use(errorController.internalServerError);
 
 app.listen(port, () => {
     console.log(`the server is listening on ${port}`)
