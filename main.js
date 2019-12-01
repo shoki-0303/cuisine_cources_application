@@ -15,6 +15,7 @@ db.once("open", () => {
 const homeController = require("./controllers/homeController");
 const userController = require("./controllers/userController");
 const errorController = require("./controllers/errorController");
+const subscriberController = require("./controllers/subscribersController");
 
 //middlewareの設定
 app.set("view engine", "ejs");
