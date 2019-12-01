@@ -3,5 +3,6 @@ exports.renderSignUpPage = (req, res) => {
 };
 
 exports.resisterUserData = (req, res) => {
-    res.render("thanks");
+    var userName = req.body.name;
+    res.render("thanks", {name: userName});
 };
