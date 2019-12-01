@@ -6,3 +6,4 @@ subscriberSchema = mongoose.Schema({
     zipCode: Number
 });
 
+module.exports = mongoose.model("Subscriber", subscriberSchema);
