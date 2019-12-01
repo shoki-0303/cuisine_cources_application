@@ -2,6 +2,7 @@ const port = "3000";
 const express = require("express");
 const app = express();
 const layouts = require("express-ejs-layouts");
+const mongoose = require("mongoose");
 
 //controllerの呼び出し
 const homeController = require("./controllers/homeController");
