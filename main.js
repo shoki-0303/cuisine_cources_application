@@ -27,6 +27,9 @@ app.use(express.static("public"));
 app.get("/", homeController.renderIndexPage);
 app.get("/signup", userController.renderSignUpPage);
 app.post("/signup", userController.resisterUserData);
+app.get("/subscribers", subscriberController.getAllsubscribers, (req, res, next) => {
+    res.render("subscribers",{subscribers: req.data})
+});
 
 //エラーハンドリング
 app.use(errorController.pageNotFoundError);
