@@ -4,6 +4,10 @@ const app = express();
 const layouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 
+//DBの接続
+mongoose.connect("mongodb://localhost:27017/recipe_db", {useNewUrlParser: true});
+const db = mongoose.connection;
+
 //controllerの呼び出し
 const homeController = require("./controllers/homeController");
 const userController = require("./controllers/userController");
