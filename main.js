@@ -7,6 +7,9 @@ const mongoose = require("mongoose");
 //DBの接続
 mongoose.connect("mongodb://localhost:27017/recipe_db", {useNewUrlParser: true});
 const db = mongoose.connection;
+db.once("open", () => {
+    console.log("Successfully connected to mongoDB")
+});
 
 //controllerの呼び出し
 const homeController = require("./controllers/homeController");
