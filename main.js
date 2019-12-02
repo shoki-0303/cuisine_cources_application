@@ -30,6 +30,7 @@ app.post("/signup", userController.resisterUserData);
 app.get("/subscribers", subscriberController.getAllsubscribers, (req, res, next) => {
     res.render("subscribers",{subscribers: req.data})
 });
+app.get("/contact",subscriberController.getSubscriptionPage);
 
 //エラーハンドリング
 app.use(errorController.pageNotFoundError);
