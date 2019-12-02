@@ -7,3 +7,7 @@ exports.getAllsubscribers = (req, res, next) => {
         next();
     });
 };
+
+exports.getSubscriptionPage = (req, res) => {
+    res.render("contact")
+}
