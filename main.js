@@ -31,6 +31,7 @@ app.get("/subscribers", subscriberController.getAllsubscribers, (req, res, next)
     res.render("subscribers",{subscribers: req.data})
 });
 app.get("/contact",subscriberController.getSubscriptionPage);
+app.post("/contact", subscriberController.saveSubscriber);
 
 //エラーハンドリング
 app.use(errorController.pageNotFoundError);
