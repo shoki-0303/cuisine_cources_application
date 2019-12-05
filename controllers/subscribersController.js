@@ -26,9 +26,12 @@ exports.saveSubscriber = (req, res) => {
         zipCode: req.body.zipCode
     });
 
-    newSubscriber.save((error, document) => {
-        if (error) res.send(error);
+    newSubscriber.save()
+    .then((document) => {
         let name = document.name;
         res.render("thanks", {name: name});
-    });
+    })
+    .catch(() => {
+        if (error) res.send(error)
+    })
 };
