@@ -4,7 +4,9 @@ const app = express();
 const layouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 
+
 //DBの接続
+mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost:27017/recipe_db", {useNewUrlParser: true});
 const db = mongoose.connection;
 db.once("open", () => {
@@ -27,9 +29,7 @@ app.use(express.static("public"));
 app.get("/", homeController.renderIndexPage);
 app.get("/signup", userController.renderSignUpPage);
 app.post("/signup", userController.resisterUserData);
-app.get("/subscribers", subscriberController.getAllsubscribers, (req, res, next) => {
-    res.render("subscribers",{subscribers: req.data})
-});
+app.get("/subscribers", subscriberController.getAllsubscribers)
 app.get("/contact",subscriberController.getSubscriptionPage);
 app.post("/contact", subscriberController.saveSubscriber);
 
